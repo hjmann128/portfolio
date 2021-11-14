@@ -1,0 +1,248 @@
+body, html {
+    height: 100%;
+    font-family: monospace;
+    margin: 20px;
+    background-color: rgba(173, 173, 173, 0.15);
+    scroll-behavior: smooth;
+}
+
+* { 
+    box-sizing: border-box;
+}
+
+
+.bg-image { 
+    height: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+    display: flex;
+}
+
+.img1 { background-image: url("/images/bike1.JPG"); }
+.img2 { background-image: url("/images/DSC02756.JPG"); }
+.img3 { background-image: url("/images/DSC02866.JPG"); }
+.img4 { background-image: url("/images/DSC02900.JPG"); }
+.img5 { background-image: url("/images/DSC02912.JPG"); }
+.img6 { background-image: url("/images/DSC02942.JPG") }
+
+.bg-text {
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+    color: white;
+    font-weight: bold;
+    font-size: 80px;
+    border: 10px solid #f1f1f1;
+    position: fixed; /* Stay fixed */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    animation-name: fade-in; 
+    animation: fade-in;
+    animation-duration: 0.75s; 
+}
+
+  @keyframes fade-in {
+    0%{
+      opacity: 0;
+    }
+    100%{
+      opacity: 1;
+    }
+  }
+
+    .fade__out{
+    animation-name: fade;
+    animation-duration: 0.75s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+  }
+
+  @keyframes fade { 
+    0%{
+     opacity: 1; 
+    }
+    100%{
+      opacity: 0;
+    }
+  }
+
+
+h1 { 
+    font-size: 5em;
+    text-transform: uppercase;
+}
+
+.hero__para {
+    font-size: 1.5em;
+}
+
+.hero__text { 
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+
+}
+
+.navbar { 
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 999;
+    background-color: #48B1D9;
+    margin: 0; 
+    padding: 0;
+    right: 0px;
+}
+
+#home{
+    background-color: black;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem ;
+}
+
+.navbar__menu { 
+    display:flex;
+    margin: 0 auto;
+    list-style: none;
+    text-align: center;
+}
+
+
+
+.list__item { 
+    color: black;
+    text-decoration: none;
+    border-radius: 10%;
+    font-family: monospace;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem; 
+    margin: 0 15px;
+    height: 100%;
+
+}
+
+.list__item:hover { 
+    animation-name: background-color; 
+    animation-duration: 600ms;
+    animation-fill-mode: forwards;
+    
+
+}
+
+@keyframes background-color {
+    100%{
+        background-color: #5AF0AB;
+        transform: scale(1.15);
+    }
+}
+
+#footer { 
+    
+    align-items: center;
+    text-align: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 20px;
+    color: white;
+    z-index: 1000;
+    margin:  auto;
+}
+
+.fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 20px;
+  }
+  
+ 
+  .fa:hover {
+    opacity: 0.7;
+  }
+
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+
+  .fa-instagram {
+    background: #8a3ab9;
+    color: white;
+  }
+
+  .__infobox {
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0, 0.4); 
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    border: 10px solid #f1f1f1;
+    top: 900px;
+    width: 40%;
+    display: inline-flex;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+  }
+
+
+  .content__card {
+      margin-top: 80px; 
+     
+      display: flex;
+      border: black solid; 
+      transition: all 0.5s ease;
+  }
+
+  .content__card:hover {  
+    height: 30em; 
+
+  }
+
+  .content__text {
+    align-items: center;
+    text-align: center;
+    margin: auto;
+  }
+
+  .content__img { 
+
+    height: 350px;
+    width: 350px;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    padding: 5px;
+  }
+
+
