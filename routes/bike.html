@@ -25,18 +25,48 @@
 <body>
     <main>
         <div class="content__card">
-            <img src="" alt="" class="content__img">
-            <div class="content__text">
-                <!-- Trail Name / Location / Distance / Elevation / Short Write Up expands on arrow click-->
-            <p>Route Name: Coal Brand Loop</p>
-            <p>Location: Hinton & Surround Area</p>  
-            <p>Difficulty: Beginner / Intermediate </p>  
+
+            <div class="content__img">
+              <img class="content__img" src="/images/bikepics/180CA5B1-18E7-461B-BB9E-B3302F326342.JPG" alt="Coal Branch Loop">
             </div>
-            
-            </div>
-        </div>
+  
+              
+                  <!-- Trail Name / Location / Distance / Elevation / Short Write Up expands on arrow click-->
+              <button class="collapsible"><p>Route Name: Coal Branch Loop || 280km || Hinton, AB</p></button>
+              <div class="content__text" style="display: none">
+              <p>Location: Hinton & Surrounding Areas</p>  
+              <p>280kms </p>
+              <!-- The grid: four columns -->
+<div class="row">
+    <div class="column">
+      <img class="gallery__img" src="/images/bike1.JPG" alt="Paved road outside of Cadamin" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img class="gallery__img" src="/images/bikepics/180CA5B1-18E7-461B-BB9E-B3302F326342.JPG" alt="Highest point on route" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img class="gallery__img" src="/images/DSC02865.JPG" alt="Views over the valley" onclick="myFunction(this);">
+    </div>
+    <div class="column">
+      <img class="gallery__img" src="/images/DSC02886.JPG" alt="Riding the" onclick="myFunction(this);">
+    </div>
+  </div>
+  
+  <!-- The expanding image container -->
+  <div class="container">
+    <img id="expandedImg" style="width:50%">
+    <div id="imgtext"></div>
+  </div>
+              
+              <button class="close">Close</button>
+              </div>
+  
+              
+              </div>
+          </div>
 
     </main>
     
 </body>
+<script src="/app.js"></script>
 </html>
