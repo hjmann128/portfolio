@@ -3,6 +3,7 @@ const bgImg = document.querySelector('.bg-text')
 const body = document.getElementsByTagName('body')
 const card = document.getElementsByClassName('collapsible');
 const less = document.getElementsByClassName('close');
+const galleries = document.getElementsByClassName('gallery__img')
 
 
 //Adding event listners to buttons
@@ -16,6 +17,21 @@ for(let i = 0; i < card.length; i++){
         ReverseDisplay(card[i]);
 
     })}
+
+for(let i =0; i< galleries.length; i++) {
+    galleries[i].addEventListener('click', ()=> {
+        myFunction(galleries[i])
+    })
+    galleries[i].addEventListener('mouseover', ()=> {
+        mouseOn(galleries[i])
+    })
+    galleries[i].addEventListener('mouseout', ()=> {
+        mouseOut(galleries[i])
+    })
+}
+
+
+
 
 
 //Closes card boxes
@@ -33,8 +49,16 @@ function CloseDisplay(d){
 
 //Toggles display
 function ReverseDisplay(d) {
+    console.log(card.nextElementSibling)
     
-    if(d.nextElementSibling.style.display == "none") {d.nextElementSibling.style.display = "block"; }
+    if(d.nextElementSibling.style.display == "none") 
+    {   for(let i = 0; i < card.length; i++){
+        card[i].nextElementSibling.style.display = "none"
+        card[i].style.display = "flex"
+    }
+        d.nextElementSibling.style.display = "block"; 
+
+}
     else { d.nextElementSibling.style.display = "none"; }
     d.style.display = "none";
    
@@ -67,18 +91,17 @@ let footerItemThree = document.querySelector('.__email')
 
 
 function myFunction(imgs) {
-    // Get the expanded image
-    console.log(imgs.parentNode.parentNode.parentNode.id)
-    var expandImg = document.getElementById("expandedImg");
-    // Get the image text
-    var imgText = document.getElementById("imgtext");
-    // Use the same src in the expanded image as the image being clicked on from the grid
-    expandImg.src = imgs.src;
-    // Use the value of the alt attribute of the clickable image as text inside the expanded image
-    imgText.innerHTML = imgs.alt;
-    // Show the container element (hidden with CSS)
-    
-    expandImg.parentElement.style.display = "block";
+        console.log(imgs)
+        
+        imgs.style = 'transform: scale(2.2); opacity:1; z-index: 10000; border: 5px white solid; border-radius: 10%; padding: 0'
   }
+
+function mouseOn(img){
+    img.style = 'transform: scale(1.1); z-index: 10000'
+}
+
+function mouseOut(img){
+    img.style = 'transform: scale(1.0); opacity: .7; z-index: auto '
+}
 
 

@@ -184,6 +184,7 @@ h1 {
     color: white;
     z-index: 1000;
     margin:  auto;
+    
 }
 
 .fa {
@@ -243,14 +244,14 @@ h1 {
 
   .collapsible {
     padding: 20px;
-    max-height: 30%;
+    max-height: 50%;
     align-self: center;
     justify-content: center;
     display: flex;
     margin-left: 10px;
     margin-right: 10px;
     width: 60%;
-    font-size: 1.4em;
+    font-size: 1.5em;
   }
 
   .close {
@@ -274,7 +275,7 @@ h1 {
     margin: auto;
     display: none; 
     padding: 5px;
-    font-size: 1.3em;
+    font-size: 1.8em;
     max-width: 80%;
   }
 
@@ -289,7 +290,7 @@ h1 {
   }
 
   .gallery__img { 
-
+    position: relative;
     max-height: 95%;
     max-width: 95%;
     align-items: center;
@@ -297,6 +298,8 @@ h1 {
     display: flex;
     padding: 5px;
   }
+
+  
 
 
 /* The grid: Four equal columns that floats next to each other */
