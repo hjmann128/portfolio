@@ -56,7 +56,7 @@ function ReverseDisplay(d) {
         card[i].nextElementSibling.style.display = "none"
         card[i].style.display = "flex"
     }
-        d.nextElementSibling.style.display = "block"; 
+        d.nextElementSibling.style = "posistion: static; opacity: 1; transition: opacity 3s linear;"; 
 
 }
     else { d.nextElementSibling.style.display = "none"; }
