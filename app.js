@@ -37,8 +37,10 @@ for(let i =0; i< galleries.length; i++) {
 //Closes card boxes
 function CloseDisplay(d){
     
-    if(d.previousElementSibling.style.display != "none"){
-        d.previousElementSibling.style.display = "none"
+    if(d.parentNode.style.display != "none"){
+        console.log(d.parentNode)
+        d.parentNode.style.display = "none"
+        d.parentNode.previousElementSibling.style.display = 'flex'
     }else {
     d.parentNode.style.display = "none"
     d.parentNode.previousElementSibling.style.display = "flex";  
@@ -55,8 +57,9 @@ function ReverseDisplay(d) {
     {   for(let i = 0; i < card.length; i++){
         card[i].nextElementSibling.style.display = "none"
         card[i].style.display = "flex"
+        
     }
-        d.nextElementSibling.style = "posistion: static; opacity: 1; transition: opacity 3s linear;"; 
+        d.nextElementSibling.style = "background: white; posistion: static; opacity: 1; transition: opacity 3s linear; "; 
 
 }
     else { d.nextElementSibling.style.display = "none"; }
